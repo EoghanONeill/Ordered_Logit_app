@@ -1,15 +1,40 @@
 shinyUI(pageWithSidebar(
-  headerPanel('Multinomial Logistic Regression Probabilities'),
+  headerPanel('Ordinal Logistic Regression Probabilities'),
   sidebarPanel(
     sliderInput('b_1', 'Select coefficient parameter', value = 1, min = -10, max = 10, step = 0.25),
     sliderInput('alpha_1', 'Select threshold for j=1 versus j=2', value = -1, min = -10, max = 10, step = 0.25),
     sliderInput('alpha_2', 'Select threshold for j=2 versus j=3', value = 0, min = -10, max = 10, step = 0.25),
     sliderInput('alpha_3', 'Select threshold for j=3 versus j=4', value = 1, min = -10, max = 10, step = 0.25),
-    sliderInput('alpha_4', 'Select threshold for j=4 versus j=5', value = 2, min = -10, max = 10, step = 0.25)),
+    sliderInput('alpha_4', 'Select threshold for j=4 versus j=5', value = 2, min = -10, max = 10, step = 0.25),
+    sliderInput('b_11', 'Select GOL coefficient b_11', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_12', 'Select GOL coefficient b_12', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_13', 'Select GOL coefficient b_13', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_14', 'Select GOL coefficient b_14', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_02', 'Select adj. cat./SL  intercept b_02', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_03', 'Select adj. cat./SL  intercept b_03', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_04', 'Select adj. cat./SL  intercept b_04', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_05', 'Select adj. cat./SL  intercept b_05', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_1_AC', 'Select adj. cat.  coefficient b_1', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('phi_2', 'Stereotype Logit phi_2', value = 0.25, min = 0, max = 1, step = 0.1),
+    sliderInput('phi_3', 'Stereotype Logit phi_3', value = 0.5, min = 0, max = 1, step = 0.1),
+    sliderInput('phi_4', 'Stereotype Logit phi_4', value = 0.75, min = 0, max = 1, step = 0.1),
+    sliderInput('b_1_SL', 'Select SL  coefficient b_1', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_01_CR', 'Select CR coefficient b_11', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_02_CR', 'Select CR coefficient b_12', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_03_CR', 'Select CR coefficient b_13', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_04_CR', 'Select CR coefficient b_14', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_11_CR', 'Select CR coefficient b_11', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_12_CR', 'Select CR coefficient b_12', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_13_CR', 'Select CR coefficient b_13', value = 1, min = -10, max = 10, step = 0.25),
+    sliderInput('b_14_CR', 'Select CR coefficient b_14', value = 1, min = -10, max = 10, step = 0.25)),
   mainPanel(
     plotOutput('plot1', width = "600px", height = "600px"),
     plotOutput('plot2', width = "600px", height = "600px"),
     plotOutput('plot3', width = "600px", height = "600px"),
-    plotOutput('plot4', width = "600px", height = "600px")
+    plotOutput('plot4', width = "600px", height = "600px"),
+    plotOutput('plot5', width = "600px", height = "600px"),
+    plotOutput('plot6', width = "600px", height = "600px"),
+    plotOutput('plot7', width = "600px", height = "600px"),
+    plotOutput('plot8', width = "600px", height = "600px")
   )
 ))
